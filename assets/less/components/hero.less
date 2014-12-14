@@ -17,14 +17,22 @@
 }
 
 .hero-tagline {
-  font-size: @hero-tagline--fontSize;
+  .m-fontSize(@hero-tagline--fontSize);
   margin-bottom: 20px;
 }
 
 .hero-signature {
-  font-size: @hero-signature--fontSize;
+  .m-fontSize(@hero-signature--fontSize);
 }
 
 .hero-signature:before {
   content: "—";
 }
+
+.m-maxMedia(@mediaBreakpoint-1, {
+  .hero {
+    width: 100%;
+    padding: 0 5%;
+    margin-left: -50%;
+  }
+});
