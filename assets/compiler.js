@@ -30,8 +30,7 @@ webpackConfig = function (fileInput, fileOutput) {
 
 compile = function (finished) {
   [
-    ["templates/index.html", "index.html"],
-    ["less/application.less", "stylesheets/application.css"]
+    ["templates/index.html", "index.html"]
   ].forEach(function (filenames, i) {
     webpack(webpackConfig(filenames[0], filenames[1])).run(finished);
   });
